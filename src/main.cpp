@@ -24,7 +24,7 @@ char tmpStr [3] = {0};
 char httpRequestData [100] = {0};
 
 unsigned long lastTime = 0;
-unsigned long timerDelay = 20000;
+unsigned long timerDelay = 10000;
 
 String requestChain = "";
 
@@ -76,7 +76,7 @@ void loop() {
       http.addHeader("Content-Type", "application/x-www-form-urlencoded");
 
       //template de requete pour ajouter la temperature a la fin
-      String templateStr = "micro=MKR1010&capteur=TMP36&valeur="; 
+      String templateStr = "micro=ESP32B&capteur=TMP36&valeur="; 
 
       //capture de temperature avec la bonne forme
       aht.getEvent(&humidity, &temp); 
